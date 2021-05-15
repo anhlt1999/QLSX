@@ -12,7 +12,7 @@ import web.repo.DonhangRepository;
 
 import java.util.List;
 
-@Controller
+@RestController
 @CrossOrigin(origins = "https://qlsanxuat.herokuapp.com")
 @RequestMapping("/donhang")
 public class Donhang_Controller {
@@ -23,9 +23,8 @@ public class Donhang_Controller {
 		this.donhangRepo = donhangRepo;
 	}
 	@GetMapping("/getAll")
-	public String getAll(Model model){
-		model.addAttribute("donhang",donhangRepo.findAll());
-		return "donhang";
+	public List<Donhang> getAll(){
+		return (List<Donhang>) donhangRepo.findAll();
 	}
 	@GetMapping("/add")
 	public String addDonhang(Model model){
