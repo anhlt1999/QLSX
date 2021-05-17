@@ -1,0 +1,171 @@
+
+v
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        
+		<title>Admin</title>s
+		<link rel="stylesheet" th:href="@{/assets/css/formAdd.css}">
+        <link rel="stylesheet" th:href="@{/assets/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{/assets/css/font-awesome.min.css}">
+        <link rel="stylesheet" th:href="@{/assets/css/AdminLTE.css}">
+        <link rel="stylesheet" th:href="@{/assets/css/_all-skins.min.css}">
+        <link rel="stylesheet" th:href="@{/assets/css/jquery-ui.css}">
+        <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+ 		<link rel="stylesheet" th:href="@{/assets/css/formAdd.css}"> 
+        <script th:src="@{/assets/js/angular.min.js}"></script>
+        <script th:src="@{/assets/js/app.js}"></script>
+        
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+	<div class="wrapper">
+		 <header class="main-header">
+		                <!-- Logo -->
+		                <a href="/" class="logo">
+		                    <!-- mini logo for sidebar mini 50x50 pixels -->
+		                    <span class="logo-mini"><b>A</b>LT</span>
+		                    <!-- logo for regular state and mobile devices -->
+		                    <span class="logo-lg">Manager</span>
+		                </a>
+		                <!-- Header Navbar: style can be found in header.less -->
+		                <nav class="navbar navbar-static-top">
+		                    <!-- Sidebar toggle button-->
+		                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+		                        <span class="sr-only">Toggle navigation</span>
+		                        <span class="icon-bar"></span>
+		                        <span class="icon-bar"></span>
+		                        <span class="icon-bar"></span>
+		                    </a>
+		
+		                    <div class="navbar-custom-menu">
+		                        <ul class="nav navbar-nav">
+		
+		
+		                        </ul>
+		                    </div>
+		                </nav>
+		            </header>
+		             <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+
+                    <!-- search form -->
+                    <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                   <ul class="sidebar-menu" data-widget="tree">
+
+                        <li>
+                            <a href="/hdn/getAll">
+                                <i class="fa fa-th"></i> <span>Quản lý Chức Năng </span>
+                            </a>
+                        </li>
+
+                        <li class="treeview">
+                            <a href="#">
+                                <span>Quản lý kho</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/hdn/getAll"><i class="fa fa-circle-o"></i> Nhập Kho</a></li>
+                                <li><a href="/hdx/getAll"><i class="fa fa-circle-o"></i> Xuất Kho</a></li>
+                                <li><a href="/nvl/getAll"><i class="fa fa-circle-o"></i> Nguyên Vật Liệu</a></li>
+                                <li><a href="/tp/getAll"><i class="fa fa-circle-o"></i> Kho Thành Phẩm</a></li>
+                            </ul>
+                        </li>
+						  <li>
+                            <a href="/tk/logout">
+                                <i></i> <span>Logout</span>                            
+                            </a>
+                        </li>
+                        
+
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+		            
+		            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        Thêm thành phẩm
+
+                    </h1>
+                    
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+
+				<form method="post" th:action="@{/tp/save}" th:object="${tp}">
+		<table border="0" cellpadding="10">
+				<td><input type="hidden" th:field="*{id}" /></td>
+				
+				<tr>
+                    <td>Tên:</td>
+                    <td><input type="text" th:field="*{ten}" required/></td>
+                </tr>
+                <tr>
+                    <td>Số lượng:</td>
+                    <td><input type="number" th:field="*{soluong}" min="1" required/></td>
+                </tr>
+                <tr>
+                    <td>Giá:</td>
+                    <td><input type="number" th:field="*{gia}" min="1" required/></td>
+                </tr>
+                <tr>
+                    <td>Ngày kết thúc:</td>
+                    <td><input type="text" th:field="*{ngayKT}" required/></td>
+                </tr>                          
+                <tr>
+                    <td colspan="2"><button type="submit">Lưu</button> </td>
+                </tr>
+            </table>
+	</form>
+
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+		            
+		           
+				
+		            <footer class="main-footer">
+		                <div class="pull-right hidden-xs">
+		                    <b>Version</b> 0.0.1
+		                </div>
+	                	<strong>Copyright &copy; 2021 <a href="https://adminlte.io">Quản lý sản xuất dệt may</a>.</strong>
+            		</footer>
+		            
+	</div>
+
+	<script th:src="@{/assets/js/vendor/jquery.min.js}"></script>
+		<script th:src="@{/assets/js/vendor/jquery-ui.js}"></script>
+		<script th:src="@{/assets/js/vendor/bootstrap.min.js}"></script>
+		<script th:src="@{/assets/js/vendor/adminlte.min.js}"></script>
+		<script th:src="@{/assets/js/vendor/dashboard.js}"></script>
+		<script th:src="@{/assets/js/tinymce/tinymce.min.js}"></script>
+		<script th:src="@{/assets/js/tinymce/config.js}"></script>
+		<script th:src="@{/assets/js/vendor/function.js}"></script>
+</body>
+</html>
+
+
+
+	
+
+

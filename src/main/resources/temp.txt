@@ -1,0 +1,13 @@
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Hà Nội', 'hien@gmail.com', '10000000', '0969599764', 'Nguyễn Văn Hiên', 'qtv');
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Hà Nội', 'uyen@gmail.com', '20000000', '0927566432', 'Nguyễn Thị Tố Uyên', 'qldh');
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Hà Nam', 'phat@gmail.com', '8000000', '0967543276', 'Bùi Minh Phát', 'qlk');
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Hòa Bình', 'minh@gmail.com', '12000000', '0978654387', 'Nguyễn Thị Minh', 'qlsx');
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Bắc Ninh', 'lan@gmail.com', '10500000', '0978767654', 'Nguyễn Phương Lan', 'nvtk');
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Bắc Giang', 'myy@gmail.com', '10500000', '0978767654', 'Đoàn Thị My', 'nvtk');
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Vĩnh Phúc', 'mai@gmail.com', '10500000', '0978767654', 'Vũ Thu Mai', 'nvtk');
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Hòa Bình', 'minh@gmail.com', '7000000', '0978767654', 'Bùi Tuấn Minh', 'cn' );
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Hà Nam', 'minh@gmail.com', '7000000', '0978767654', 'Lưu Thị Giang', 'cn');
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Vĩnh Phúc', 'minh@gmail.com', '7000000', '0978767654', 'Bùi Tuấn Anh', 'cn');
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Vĩnh Phúc', 'minh@gmail.com', '7000000', '0978767654', 'Đặng Thị Quỳnh', 'cn');
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Hải Dương', 'minh@gmail.com', '7000000', '0978767654', 'Bùi Minh Quân', 'cn');
+INSERT INTO `pthttt`.`nhanvien` ( `dia_chi`, `email`, `luong`, `phone`, `ten`, `vaitro`, ) VALUES ('Hải Dương', 'minh@gmail.com', '7000000', '0978767654', 'Nguyễn Thị Hà', 'cn');

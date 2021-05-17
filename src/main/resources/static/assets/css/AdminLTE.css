@@ -86,7 +86,7 @@ body {
   }
 }
 .content-wrapper {
-  min-height: 100%;
+  min-height: 80%;
   background-color: #ecf0f5;
   z-index: 800;
 }
@@ -294,9 +294,11 @@ a:focus {
   padding: 0 15px;
   font-weight: 300;
   overflow: hidden;
+  height: 69px;
 }
 .main-header .logo .logo-lg {
   display: block;
+  margin-top: 10px;
 }
 .main-header .logo .logo-mini {
   display: none;
@@ -410,7 +412,7 @@ a:focus {
  */
 .main-sidebar {
   position: absolute;
-  top: 0;
+  top: 22px;
   left: 0;
   padding-top: 50px;
   min-height: 100%;
