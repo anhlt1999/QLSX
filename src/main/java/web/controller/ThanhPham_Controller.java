@@ -60,15 +60,12 @@ public class ThanhPham_Controller {
 		
 	@GetMapping("/search")
 	public String searchtTP(@Param("keyword") String keyword, Model model) throws ParseException {
-		SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
-		SimpleDateFormat sdf2 = new SimpleDateFormat("dd-MM-yyyy");
-		String kt = sdf2.format(sdf1.parse(keyword));
-		if(kt=="") {
+		if(keyword=="") {
 			return "redirect:/tp/getAll";
-		} else if(!kt.matches("\\d{2}-\\d{2}-\\d{4}")) {
+		} else if(!keyword.matches("\\d{2}-\\d{2}-\\d{4}")) {
 			// hql with relationship
-			Query q = entitymanager.createQuery("select tp from ThanhPham as tp where ten = :x");
-			q.setParameter("x", kt);
+			Query q = entitymanager.createQuery("select tp from ThanhPham as tp where tp.ten like :x");
+			q.setParameter("x", "%"+keyword+"%");
 			
 			List<ThanhPham> list = (List<ThanhPham>) q.getResultList();
 			model.addAttribute("tp", list);		

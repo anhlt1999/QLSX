@@ -51,7 +51,7 @@ public class Donhang_Controller {
 	
 	@GetMapping("/search")
 	public String searchDonhang(@Param("keyword") String keyword, Model model) {
-			List<Donhang> list = (List<Donhang>) donhangRepo.findAllByMotaContaining(keyword);
+			List<Donhang> list = donhangRepo.findAllByMotaContaining(keyword);
 			model.addAttribute("donhang", list);
 		return "qldh/donhang";
 	}

@@ -61,6 +61,7 @@ public class QLDieuHanh_Controller {
         hdnrepo.save(hdn);
         return "redirect:/dieuhanh/nhapkho";
     }
+    
     @GetMapping("/deletenk/{id}")
     public String deleteNk(@PathVariable Long id){
         hdnrepo.deleteById(id);
@@ -92,18 +93,20 @@ public class QLDieuHanh_Controller {
         nvlrepo.save(nvl);
         return "redirect:/dieuhanh/xuatkho";
     }
+    
     @GetMapping("/deletexk/{id}")
     public String deleteXk(@PathVariable Long id){
         hdxrepo.deleteById(id);
         return "redirect:/dieuhanh/xuatkho";
     }
+    
     //tim kiem hdx theo ten nvl
     @GetMapping("/searchx")
     public String searchXK(@Param("keyword") String keyword,  Model model)  {
         if(keyword!="" )
         {
-            Query q= entitymanager.createQuery("select hdx from HoaDonXuat as hdx join hdx.nvls as nvl where nvl.ten = :x");
-            q.setParameter("x", keyword);
+            Query q= entitymanager.createQuery("select hdx from HoaDonXuat as hdx join hdx.nvls as nvl where nvl.ten like :x");
+            q.setParameter("x", "%"+keyword+"%");
             List<HoaDonXuat> list= (List<HoaDonXuat>) q.getResultList();
             model.addAttribute("xuatkho", list);
         }
@@ -119,8 +122,8 @@ public class QLDieuHanh_Controller {
     public String searchNK(@Param("keyword") String keyword,  Model model)  {
         if(keyword!="" )
         {
-            Query q= entitymanager.createQuery("select hdn from HoaDonNhap as hdn join hdn.nvls as nvl where nvl.ten = :x");
-            q.setParameter("x", keyword);
+            Query q= entitymanager.createQuery("select hdn from HoaDonNhap as hdn join hdn.nvls as nvl where nvl.ten like :x");
+            q.setParameter("x", "%"+keyword+"%");
             List<HoaDonNhap> list= (List<HoaDonNhap>) q.getResultList();
             model.addAttribute("nhapkho", list);
         }

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import web.entity.BaoCaoTonKho;
-import web.entity.HoaDonNhap;
 import web.repo.BaoCaoTonKhoRepository;
 
 import javax.persistence.EntityManager;
@@ -96,7 +95,6 @@ public class BaoCaoTonKho_Controller {
         return "qldh/bctk";
 
     }
-
     
     @PostMapping("/save")
     public String addBctp(BaoCaoTonKho bc){

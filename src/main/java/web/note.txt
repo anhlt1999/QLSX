@@ -1,0 +1,24 @@
+
+----------------------QLSX----------------------
+- Thêm sửa xóa BTP
+- Confirm BTP --> Thành Phẩm --> update số lượng ở QLK
+- Yêu cầu NVL --> QLDH confirm --> update số lượng NVL ở QLK + hiển thị HĐN 
+
+----------------------QLĐH----------------------
+- Xem đơn hàng
+- Confirm yêu cầu nhập từ QLSX + QLK
+- Confirm yêu cầu xuất từ QLK
+- Thêm sửa xóa BCTP, BCTK
+
+----------------------QLK----------------------
+- Thêm sửa xóa hóa đơn nhập --> QLDH confirm --> update số lượng NVL ở QLK
+- Thêm sửa xóa hóa đơn xuất --> QLDH confirm --> update số lượng NVL ở QLK
+- Thêm sửa xóa hóa NVL
+- Thêm sửa xóa hóa TP
+
+----------------------QTV----------------------
+- Thêm sửa xóa Nhân viên
+- Thêm sửa xóa Tài khoản
+
+----------------------NVTK----------------------
+- Thêm sửa xóa Bản mẫu

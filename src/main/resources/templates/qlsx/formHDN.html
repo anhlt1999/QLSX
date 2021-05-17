@@ -100,7 +100,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Thêm hóa đơn nhập
+                        Thêm yêu cầu NVL
                     </h1>
                     
                 </section>
@@ -112,17 +112,21 @@
 									<td><input type="hidden" th:field="*{id}" /></td>
 									
 					                <tr>
-					                    <td>Số lượng:</td>
-					                    <td><input type="text" th:field="*{soLuong}" /></td>
-					                </tr>
-					                <tr>
 					                    <td>Nguyên vật liệu:</td>
 					                    <td><input type="text" th:field="*{nvls.id}" /></td>
 					                </tr>    
 					                 <tr>
 					                    <td>Nhà cung cấp</td>
 					                    <td><input type="text" th:field="*{nhacungcaps.id}" /></td>
-					                </tr>                        
+					                </tr>   
+					                <tr>
+					                    <td>Số lượng:</td>
+					                    <td><input type="text" th:field="*{soLuong}" /></td>
+					                </tr>
+					                <tr>
+					                    <td>Đơn vị:</td>
+					                    <td><input type="text" th:field="*{donvi}" /></td>
+					                </tr>                     
 					                <tr>
 					                    <td colspan="2"><button type="submit">Lưu</button> </td>
 					                </tr>

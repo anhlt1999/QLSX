@@ -43,7 +43,7 @@ public class HoaDonXuat_Controller {
 	
 	@GetMapping("/getAll")
 	public String getAll(Model model) {
-		model.addAttribute("hdx", hdxRepo.findAll());
+		model.addAttribute("hdx", hdxRepo.findAllByTrangThaiContaining("confirm"));
 		return "qlk/hdx";
 	}
 
@@ -104,6 +104,23 @@ public class HoaDonXuat_Controller {
 		return "qlk/hdx";
 	}
 	
+//	@PostMapping("/save_add")
+//	public String addHDX(HoaDonXuat hdx) {
+//		NVL nvl = new NVL();
+//		nvl = nvlRepo.findById(hdx.getNvls().getId()).get();
+//		if(nvl.getSoLuong() >= hdx.getSoLuong()) {
+//			nvl.setSoLuong(nvl.getSoLuong() - hdx.getSoLuong());
+//			nvlRepo.save(nvl);
+//			
+//			hdx.setTongtien(hdx.getSoLuong()*nvl.getGia());
+//			hdxRepo.save(hdx);
+//		}
+//		else {
+//			return "qlk/formHDX_error";
+//		}
+//		
+//		return "redirect:/hdx/getAll";
+//	}
 	@PostMapping("/save_add")
 	public String addHDX(HoaDonXuat hdx) {
 		NVL nvl = nvlRepo.findById(hdx.getNvls().getId()).get();
