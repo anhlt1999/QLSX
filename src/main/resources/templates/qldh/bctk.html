@@ -221,8 +221,6 @@
               <th>Số lượng xuất</th>
               <th>Tổng hàng tồn</th>
               <th>Ngày nhập</th>
-              <th>Nhân viên</th>
-              <th>Vị trí nv</th>
               <th>Action</th>
               </thead>
               <tbody>
@@ -233,8 +231,6 @@
                 <td th:text="${item.soluongXuat}"></td>
                 <td th:text="${item.tongHangTon}"></td>
                 <td th:text="${item.nvls.ngayNhap}"></td>
-                <td th:text="${item.nhanviens.ten}"></td>
-                <td th:text="${item.nhanviens.vaitro}"></td>
                 <td>
                   <a th:href="@{/bctk/edit/{id}(id=${item.id})}">Sửa</a>
                   <a th:href="@{/bctk/delete/{id}(id=${item.id})}">Xóa</a>
